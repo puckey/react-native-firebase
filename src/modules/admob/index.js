@@ -102,13 +102,13 @@ export default class AdMob extends ModuleBase {
     }
   }
   
-   setMuted(muted: boolean): void {
+   setAppMuted(muted: boolean): void {
     if (!this._initialized) {
       getLogger(this).warn(
-        'AdMob needs to be initialized before calling setMuted!'
+        'AdMob needs to be initialized before calling setAppMuted!'
       );
     } else {
-      getNativeModule(this).setMuted(muted);
+      getNativeModule(this).setAppMuted(muted);
     }
   }
 
