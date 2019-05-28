@@ -101,6 +101,16 @@ export default class AdMob extends ModuleBase {
       getNativeModule(this).openDebugMenu(this._appId);
     }
   }
+  
+   setMuted(muted: boolean): void {
+    if (!this._initialized) {
+      getLogger(this).warn(
+        'AdMob needs to be initialized before calling setMuted!'
+      );
+    } else {
+      getNativeModule(this).setMuted(muted);
+    }
+  }
 
   interstitial(adUnit: string): Interstitial {
     return new Interstitial(this, adUnit);
