@@ -50,8 +50,8 @@ public class RNFirebaseAdMob extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void setMuted(Boolean muted) {
-    MobileAds.setMuted(muted);
+  public void setAppMuted(Boolean muted) {
+    MobileAds.setAppMuted(muted);
   }
   
   @ReactMethod
