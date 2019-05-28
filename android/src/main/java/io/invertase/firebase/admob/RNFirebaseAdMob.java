@@ -50,6 +50,11 @@ public class RNFirebaseAdMob extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
+  public void setMuted(Boolean muted) {
+    MobileAds.setMuted(muted);
+  }
+  
+  @ReactMethod
   public void interstitialLoadAd(String adUnit, ReadableMap request) {
     RNFirebaseAdmobInterstitial interstitial = getOrCreateInterstitial(adUnit);
     interstitial.loadAd(RNFirebaseAdMobUtils
