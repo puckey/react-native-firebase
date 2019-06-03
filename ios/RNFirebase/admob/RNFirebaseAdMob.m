@@ -38,6 +38,11 @@ RCT_EXPORT_METHOD(openDebugMenu:
     [[window rootViewController] presentViewController:debugOptionsViewController animated:YES completion:nil];
 }
 
+RCT_EXPORT_METHOD(setAppMuted:
+  (BOOL) muted) {
+  [GADMobileAds sharedInstance] .applicationMuted = muted;
+}
+
 RCT_EXPORT_METHOD(interstitialLoadAd:
     (NSString *) adUnit
             request:
